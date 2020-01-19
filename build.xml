@@ -1,0 +1,21 @@
+<project default="compile">
+    <target name="compile">
+        <mkdir dir="bin"/>
+        <javac srcdir="src" destdir="bin" includeantruntime="false"/>
+    </target>
+
+
+    <target name="jar" depends="compile">
+        <mkdir dir = "jar"/>
+        <jar destfile="jar/ProfileAdder.jar" basedir="bin">
+            <manifest>
+                <attribute name="Main-Class" value ="Launcher"/>
+            </manifest>
+        </jar>
+
+    </target>
+    <target name="run" depends="compile">
+        <java jar="jar/ProfileAdder.jar" fork="true"/>
+    </target>
+
+</project>
