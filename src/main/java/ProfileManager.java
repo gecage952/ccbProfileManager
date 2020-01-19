@@ -36,7 +36,7 @@ public class ProfileManager {
     //individual parameters must be sent by POST
     //
 
-    private static final String USERPASS = "ethancage:wpbc8833";
+    private static final String USERPASS = "";
 
 
 
@@ -139,7 +139,7 @@ public class ProfileManager {
 
         for (Listing current: searchResults) {
             System.out.println(current.getFirstNameCasual());
-            System.out.println(entry.getFirstNameCasual() + " YIYIIYIYYIYIYIYIIYII " + searchResults.size());
+            System.out.println(entry.getFirstNameCasual() + " " + searchResults.size());
 
             if (current.equals(entry)) {
                 duplicate.add(entry);
